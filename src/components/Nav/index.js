@@ -1,22 +1,34 @@
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export default function Nav(props) {
-  const { className } = props;
+export default function Nav() {
+  const navConfig = [
+    {
+      text: 'Home',
+      url: '/',
+    },
+    {
+      text: 'About us',
+      url: 'about-us',
+    },
+    {
+      text: 'Faq',
+      url: 'faq',
+    },
+  ];
 
   return (
-    <nav className={className}>
-      <Link to='/'>Home</Link>
-      <Link to='about-us'>About us</Link>
-      <Link to='faq'>Faq</Link>
+    <nav className='flex flex-row'>
+      {navConfig.map((i) => (
+        <NavLink
+          key={i.url.toLowerCase()}
+          to={i.url}
+          className={({ isActive }) =>
+            isActive ? ' text-orange-600 px-4' : 'px-4'
+          }
+        >
+          {i.text}
+        </NavLink>
+      ))}
     </nav>
   );
 }
-
-Nav.propTypes = {
-  className: PropTypes.string,
-};
-
-Nav.defaultProps = {
-  className: '',
-};

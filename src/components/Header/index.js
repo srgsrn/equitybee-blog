@@ -11,7 +11,9 @@ export default function Header() {
           <Search />
         </div>
 
-        <Nav className='qwe' />
+        <div className='flex flex-row justify-center'>
+          <Nav />
+        </div>
       </div>
     </div>
   );
