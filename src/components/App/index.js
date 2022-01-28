@@ -12,7 +12,7 @@ export default function App() {
     <BrowserRouter>
       <Header />
 
-      <main className='xl:container xl:mx-auto px-4'>
+      <main className='xl:container xl:mx-auto px-4 py-8'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='about-us' element={<AboutUs />} />
