@@ -10,17 +10,19 @@ import Footer from 'components/Footer';
 export default function App() {
   return (
     <BrowserRouter>
-      <h1>Hello there!</h1>
-
       <Header />
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='about-us' element={<AboutUs />} />
-        <Route path='faq' element={<Faq />} />
-      </Routes>
+      <main className='xl:container xl:mx-auto px-4'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='about-us' element={<AboutUs />} />
+          <Route path='faq' element={<Faq />} />
+        </Routes>
+      </main>
 
       <Footer />
+
+      <h1>Hello there!</h1>
     </BrowserRouter>
   );
 }

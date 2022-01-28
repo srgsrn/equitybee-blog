@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <div>Footer</div>;
+  return <div className='xl:container xl:mx-auto px-4'>Footer</div>;
 }
